@@ -1,46 +1,25 @@
-import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
-import router from './app/modules/users/user.routes'
+import express, { Application } from 'express'
+import globalErrorHandler from './app/Middlewares/globalErrorHandler'
+import { UserRoutes } from './app/modules/users/user.routes'
+// import ApiError from './Errors/ApiError'
 
 const app: Application = express()
 
 app.use(cors())
 
-class ApiError extends Error {
-  statusCode: number
-  constructor(statusCode: number, message: string | undefined, stack = '') {
-    super(message)
-    this.statusCode = statusCode
-    if (stack) {
-      this.stack = stack
-    } else {
-      Error.captureStackTrace(this, this.constructor)
-    }
-  }
-}
-
-// parser
+//parser
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Apllication Route
-
-app.use('/api/v1/users', router)
+app.use('/api/v1/', UserRoutes)
 
 //Testing
-app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-  // next('onk error')
-  throw new Error('new error')
-})
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+//   throw new Error('Testing Error logger')
+// })
 
-// global error handeler
-
-app.use((err, req: Request, res: Response, next: NextFunction) => {
-  if (err instanceof Error) {
-    res.status(400).json({ error: err })
-  } else {
-    res.status(500).json({ error: 'Something went wrong' })
-  }
-})
+//global error handler
+app.use(globalErrorHandler)
 
 export default app
