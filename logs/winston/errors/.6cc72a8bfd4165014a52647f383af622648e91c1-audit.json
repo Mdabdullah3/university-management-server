@@ -34,6 +34,16 @@
             "date": 1686291166646,
             "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-09-06-12-errors.log",
             "hash": "9e83922112db0ecebd5d372a8f0a62373e145ac0b4b051a3d904242c2a736c6f"
+        },
+        {
+            "date": 1686305876090,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-09-06-16-errors.log",
+            "hash": "31738019fecb37a52c874161de27be2982e303d1adee691233cb3af09321eb9e"
+        },
+        {
+            "date": 1686308835015,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-09-06-17-errors.log",
+            "hash": "ce71fab37e089294a742a805edf345862fb20084c5cb684b77b5e22311de977e"
         }
     ],
     "hashType": "sha256"
