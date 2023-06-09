@@ -1,18 +1,26 @@
-import { RequestHandler } from 'express-serve-static-core'
 import { UserService } from './user.servers'
-const createUser: RequestHandler = async (req, res, next) => {
-  try {
+import catchAsync from '../../../shared/catchAsync'
+import { NextFunction, Request, Response } from 'express'
+import sendReponse from '../../../shared/sendResponse'
+import httpStatus from 'http-status'
+const createUser = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
     const { user } = req.body
     const result = await UserService.createUser(user)
-    res.status(200).json({
+    next()
+    // res.status(200).json({
+    //   success: true,
+    //   message: 'user created successfully!',
+    //   data: result,
+    // })
+    sendReponse(res, {
+      statusCode: httpStatus.OK,
       success: true,
       message: 'user created successfully!',
       data: result,
     })
-  } catch (err) {
-    next(err)
   }
-}
+)
 
 export const UserController = {
   createUser,

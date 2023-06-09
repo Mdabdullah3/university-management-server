@@ -1,9 +1,7 @@
 import cors from 'cors'
-import express, { Application } from 'express'
+import express, { Application, Request, Response } from 'express'
 import globalErrorHandler from './app/Middlewares/globalErrorHandler'
-import { UserRoutes } from './app/modules/users/user.routes'
-import { SemesterRoute } from './app/modules/academicSemester/AcademicSemesterRoute'
-// import ApiError from './Errors/ApiError'
+import router from './app/routes'
 
 const app: Application = express()
 
@@ -13,13 +11,12 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api/v1/', UserRoutes)
-app.use('/api/v1/', SemesterRoute)
+app.use('/api/v1/', router)
 
 //Testing
-// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-//   throw new Error('Testing Error logger')
-// })
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello World')
+})
 
 //global error handler
 app.use(globalErrorHandler)
