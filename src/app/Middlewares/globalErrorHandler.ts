@@ -1,27 +1,40 @@
-import { ErrorRequestHandler } from 'express'
+/* eslint-disable no-console */
+/* eslint-disable no-unused-expressions */
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
+import { Error } from 'mongoose'
 import config from '../../config'
+
+import { ZodError } from 'zod'
 import { IGenericErrorMessage } from '../../interfaces/error'
+import { errorlogger } from '../../shared/logger'
 import handleValidationError from '../../Errors/HandleValidationerror'
 import ApiError from '../../Errors/ApiError'
-import { errorlogger } from '../../shared/logger'
+import handleZodError from '../../Errors/handleZodError'
 
-// global error handeler
-const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
-  // eslint-disable-next-line no-unused-expressions
+const globalErrorHandler: ErrorRequestHandler = (
+  error,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   config.env === 'development'
-    ? // eslint-disable-next-line no-console
-      console.log('globalErrorHandler', error)
-    : errorlogger.error('globalErrorHandler', error)
+    ? console.log(`🐱‍🏍 globalErrorHandler ~~`, error)
+    : errorlogger.error(`🐱‍🏍 globalErrorHandler ~~`, error)
 
   let statusCode = 500
-  let message = 'Something Went Wrogn'
+  let message = 'Something went wrong !'
   let errorMessages: IGenericErrorMessage[] = []
 
-  if (error.name === 'ValidationError') {
-    const simplicfiedError = handleValidationError(error)
-    statusCode = simplicfiedError.statusCode
-    message = simplicfiedError.message
-    errorMessages = simplicfiedError.errorMessages
+  if (error?.name === 'ValidationError') {
+    const simplifiedError = handleValidationError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error instanceof ZodError) {
+    const simplifiedError = handleZodError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
   } else if (error instanceof ApiError) {
     statusCode = error?.statusCode
     message = error.message
@@ -51,7 +64,15 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     errorMessages,
     stack: config.env !== 'production' ? error?.stack : undefined,
   })
+
   next()
 }
 
 export default globalErrorHandler
+
+//path:
+//message:
+
+// 2025 Fall
+
+// 2025 and
