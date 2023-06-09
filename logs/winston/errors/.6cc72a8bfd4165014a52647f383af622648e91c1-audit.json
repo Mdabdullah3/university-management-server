@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\.6cc72a8bfd4165014a52647f383af622648e91c1-audit.json",
+    "files": [
+        {
+            "date": 1686151999119,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-07-06-21-errors.log",
+            "hash": "a713961c85ff53f48ffcc05bed6c8a93a8ae95598c266ded45d445e7318c47d8"
+        },
+        {
+            "date": 1686154045690,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-07-06-22-errors.log",
+            "hash": "802c526268ba18a835b6a96176c103b96285dfe017ef675da01e518b28fd79f0"
+        },
+        {
+            "date": 1686226635995,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-08-06-18-errors.log",
+            "hash": "0248605dac36f4f709debd65ab8f0fbb35178f14a110f1700095e1a888bf470e"
+        },
+        {
+            "date": 1686240471608,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-08-06-22-errors.log",
+            "hash": "cba7c98b3c857f9dbdfdce8d7e6a6457534a8ce898a355ec62e9b4970c2dd299"
+        }
+    ],
+    "hashType": "sha256"
+}
