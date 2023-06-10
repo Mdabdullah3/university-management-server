@@ -1,7 +1,8 @@
 import cors from 'cors'
-import express, { Application, Request, Response } from 'express'
+import express, { Application, NextFunction, Request, Response } from 'express'
 import globalErrorHandler from './app/Middlewares/globalErrorHandler'
 import router from './app/routes'
+import httpStatus from 'http-status'
 
 const app: Application = express()
 
@@ -18,6 +19,20 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World')
 })
 
+// Not Found Route
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.status(httpStatus.NOT_FOUND).json({
+    success: false,
+    messsage: 'Not Found',
+    errorMessages: [
+      {
+        path: req.originalUrl,
+        message: 'Api Not Found',
+      },
+    ],
+  })
+  next()
+})
 //global error handler
 app.use(globalErrorHandler)
 
