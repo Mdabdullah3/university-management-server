@@ -1,20 +1,35 @@
+import { SemesterRoute } from './../modules/academicSemester/AcademicSemesterRoute'
 import express from 'express'
-import { UserRoutes } from '../modules/users/user.routes'
-import { SemesterRoute } from '../modules/academicSemester/AcademicSemesterRoute'
+import { UserRoute } from '../users/user.routes'
+import { AcademicFacultyRoutes } from '../modules/academicFaculty/academicFaculty.route'
+import { academicDepartmentRoutes } from '../modules/academicDepartment/academicDepartment.routes'
+import { StudentRoutes } from '../modules/Student/student.route'
 
 const router = express.Router()
 
-const modulesRoute = [
+const moduleRoutes = [
   {
     path: '/users',
-    route: UserRoutes,
+    route: UserRoute,
   },
   {
-    path: '/semester',
+    path: '/academic-semesters',
     route: SemesterRoute,
+  },
+  {
+    path: '/academic-faculties',
+    route: AcademicFacultyRoutes,
+  },
+  {
+    path: '/academic-departments',
+    route: academicDepartmentRoutes,
+  },
+  {
+    path: '/students',
+    route: StudentRoutes,
   },
 ]
 
-modulesRoute.forEach(route => router.use(route.path, route.route))
+moduleRoutes.forEach(route => router.use(route.path, route.route))
 
 export default router
