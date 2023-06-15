@@ -1,0 +1,1 @@
+Wed Jun 14 2023 12:9:37 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }

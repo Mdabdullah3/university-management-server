@@ -1,0 +1,12 @@
+Wed Jun 14 2023 11:2:48 } [PH] error: E11000 duplicate key error collection: university_management.users index: id_1 dup key: { id: "340200003" }
+Wed Jun 14 2023 11:6:37 } [PH] error: E11000 duplicate key error collection: university_management.users index: id_1 dup key: { id: "340200003" }
+Wed Jun 14 2023 11:8:34 } [PH] error: E11000 duplicate key error collection: university_management.users index: id_1 dup key: { id: "340200003" }
+Wed Jun 14 2023 11:12:9 } [PH] error: E11000 duplicate key error collection: university_management.users index: id_1 dup key: { id: "340200003" }
+Wed Jun 14 2023 11:13:9 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university" }
+Wed Jun 14 2023 11:16:23 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university" }
+Wed Jun 14 2023 11:19:53 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }
+Wed Jun 14 2023 11:33:51 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }
+Wed Jun 14 2023 11:53:14 } [PH] error: Cannot set properties of undefined (setting 'id')
+Wed Jun 14 2023 11:53:52 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }
+Wed Jun 14 2023 11:57:7 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }
+Wed Jun 14 2023 11:59:31 } [PH] error: E11000 duplicate key error collection: university_management.users index: password_1 dup key: { password: "university242342" }
