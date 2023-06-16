@@ -1,125 +1,125 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\.ac016bd216654af693d8f40159a2043b122b2b4f-audit.json",
+  "files": [
+    {
+      "date": 1686151999114,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-07-06-21-success.log",
+      "hash": "32dff7f8342823b31a3b99cdfbfa073631e674d1b4cef96256032ce3f7e869ba"
     },
-    "auditLog": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\.ac016bd216654af693d8f40159a2043b122b2b4f-audit.json",
-    "files": [
-        {
-            "date": 1686151999114,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-07-06-21-success.log",
-            "hash": "32dff7f8342823b31a3b99cdfbfa073631e674d1b4cef96256032ce3f7e869ba"
-        },
-        {
-            "date": 1686154045683,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-07-06-22-success.log",
-            "hash": "94fd09a68d2e5242d992066e4d2cc072a778c136a4bb27f5b2dd42620f8315a3"
-        },
-        {
-            "date": 1686226635991,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-08-06-18-success.log",
-            "hash": "979e86d30fcb2ba6250535a4cbf3d8ef1328d8747049311bbc531e84b0d8d3b9"
-        },
-        {
-            "date": 1686240471601,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-08-06-22-success.log",
-            "hash": "61f9742c4a8c3d14a979486f81ff7e3835bfdfe7b87da4ffaa0952d85e970f99"
-        },
-        {
-            "date": 1686285421834,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-10-success.log",
-            "hash": "6b41cd50bdaaa309a830cb5830e9a6a8774dea18e30d307d0789308e7b55bf60"
-        },
-        {
-            "date": 1686291166640,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-12-success.log",
-            "hash": "a66581a50fdc56857b366a0a99532b5afc5858aa80ca66bde92db4afb2917090"
-        },
-        {
-            "date": 1686305876085,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-16-success.log",
-            "hash": "3ba99a0391b6944f35e067b12c4a09f74ba1d0174a93217704dfa74cfc146afb"
-        },
-        {
-            "date": 1686308835011,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-17-success.log",
-            "hash": "d2b1f9522a90cdea3508c00f40ed2491c53bec29a139b93ee1b3bcd8c5d50f10"
-        },
-        {
-            "date": 1686378587842,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-10-06-12-success.log",
-            "hash": "27168b573d6ecb2a9deb1068e9532bace9fbb4658a06bf3809a878e1aa412c1c"
-        },
-        {
-            "date": 1686380482480,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-10-06-13-success.log",
-            "hash": "1ff4074d446e2b796f9fbfd0b5bbe5b11066cbc50bdb9eb28a651ca22616f1c6"
-        },
-        {
-            "date": 1686457706240,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-10-success.log",
-            "hash": "317840a38cb6f70df25f73f81c7f3b36950f9663cc014bd928b7539ee8792120"
-        },
-        {
-            "date": 1686459712361,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-11-success.log",
-            "hash": "df3d71f0149bf2fb3590eeafa5fe1c738729bde85c36e1b9bea16e8eed558136"
-        },
-        {
-            "date": 1686463546986,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-12-success.log",
-            "hash": "6e86b27575768b267bd5bd1aed1f2e2fcac396246fc4f6f9252b81d017a4edf7"
-        },
-        {
-            "date": 1686631310451,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-13-06-10-success.log",
-            "hash": "f231027a0105059abefd921b4b3d2c58fbe59faa1e32087da414d45a88b32d27"
-        },
-        {
-            "date": 1686632691330,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-13-06-11-success.log",
-            "hash": "f1669341b8254d340886041652e36a255209003c06212ab69f1dee256a64d453"
-        },
-        {
-            "date": 1686712296565,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-09-success.log",
-            "hash": "19b3393d0fecc0d24e389696c25e28a19e4983404f90b28faf4e8fab77fd5b74"
-        },
-        {
-            "date": 1686715252981,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-10-success.log",
-            "hash": "b438a09126675f4d6ebd9fbc648b243e87c3c9033212503b301e5889d143611a"
-        },
-        {
-            "date": 1686718824413,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-11-success.log",
-            "hash": "6cb47fc8b39261605d8ec243a780b495659c0ef79880fdd81c0afe3d76f09952"
-        },
-        {
-            "date": 1686722750047,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-12-success.log",
-            "hash": "2a80c918d347ee0e6dcc118560155688aad00ff58a185eef1ed9ef917503da92"
-        },
-        {
-            "date": 1686733248248,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-15-success.log",
-            "hash": "6f725ffb320ec9343b75a237c2cfa43cb49b4f0f5d8d8813484feefc9f785ea2"
-        },
-        {
-            "date": 1686737544340,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-16-success.log",
-            "hash": "e76b44b7e3505ffd789d147c100c7c1630c77a7e2a9b81bbbfb6944477022136"
-        },
-        {
-            "date": 1686740415318,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-17-success.log",
-            "hash": "7c2c4ffea38c720d6b21b6bd0a77a3bffad995c8d401fbae29e90a870735e798"
-        },
-        {
-            "date": 1686744328986,
-            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-18-success.log",
-            "hash": "c38744ac67782b49db8df08925bad93335aea6108ef967149f4745be6b4a859e"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1686154045683,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-07-06-22-success.log",
+      "hash": "94fd09a68d2e5242d992066e4d2cc072a778c136a4bb27f5b2dd42620f8315a3"
+    },
+    {
+      "date": 1686226635991,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-08-06-18-success.log",
+      "hash": "979e86d30fcb2ba6250535a4cbf3d8ef1328d8747049311bbc531e84b0d8d3b9"
+    },
+    {
+      "date": 1686240471601,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-08-06-22-success.log",
+      "hash": "61f9742c4a8c3d14a979486f81ff7e3835bfdfe7b87da4ffaa0952d85e970f99"
+    },
+    {
+      "date": 1686285421834,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-10-success.log",
+      "hash": "6b41cd50bdaaa309a830cb5830e9a6a8774dea18e30d307d0789308e7b55bf60"
+    },
+    {
+      "date": 1686291166640,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-12-success.log",
+      "hash": "a66581a50fdc56857b366a0a99532b5afc5858aa80ca66bde92db4afb2917090"
+    },
+    {
+      "date": 1686305876085,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-16-success.log",
+      "hash": "3ba99a0391b6944f35e067b12c4a09f74ba1d0174a93217704dfa74cfc146afb"
+    },
+    {
+      "date": 1686308835011,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-09-06-17-success.log",
+      "hash": "d2b1f9522a90cdea3508c00f40ed2491c53bec29a139b93ee1b3bcd8c5d50f10"
+    },
+    {
+      "date": 1686378587842,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-10-06-12-success.log",
+      "hash": "27168b573d6ecb2a9deb1068e9532bace9fbb4658a06bf3809a878e1aa412c1c"
+    },
+    {
+      "date": 1686380482480,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-10-06-13-success.log",
+      "hash": "1ff4074d446e2b796f9fbfd0b5bbe5b11066cbc50bdb9eb28a651ca22616f1c6"
+    },
+    {
+      "date": 1686457706240,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-10-success.log",
+      "hash": "317840a38cb6f70df25f73f81c7f3b36950f9663cc014bd928b7539ee8792120"
+    },
+    {
+      "date": 1686459712361,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-11-success.log",
+      "hash": "df3d71f0149bf2fb3590eeafa5fe1c738729bde85c36e1b9bea16e8eed558136"
+    },
+    {
+      "date": 1686463546986,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-11-06-12-success.log",
+      "hash": "6e86b27575768b267bd5bd1aed1f2e2fcac396246fc4f6f9252b81d017a4edf7"
+    },
+    {
+      "date": 1686631310451,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-13-06-10-success.log",
+      "hash": "f231027a0105059abefd921b4b3d2c58fbe59faa1e32087da414d45a88b32d27"
+    },
+    {
+      "date": 1686632691330,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-13-06-11-success.log",
+      "hash": "f1669341b8254d340886041652e36a255209003c06212ab69f1dee256a64d453"
+    },
+    {
+      "date": 1686712296565,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-09-success.log",
+      "hash": "19b3393d0fecc0d24e389696c25e28a19e4983404f90b28faf4e8fab77fd5b74"
+    },
+    {
+      "date": 1686715252981,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-10-success.log",
+      "hash": "b438a09126675f4d6ebd9fbc648b243e87c3c9033212503b301e5889d143611a"
+    },
+    {
+      "date": 1686718824413,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-11-success.log",
+      "hash": "6cb47fc8b39261605d8ec243a780b495659c0ef79880fdd81c0afe3d76f09952"
+    },
+    {
+      "date": 1686722750047,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-12-success.log",
+      "hash": "2a80c918d347ee0e6dcc118560155688aad00ff58a185eef1ed9ef917503da92"
+    },
+    {
+      "date": 1686733248248,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-15-success.log",
+      "hash": "6f725ffb320ec9343b75a237c2cfa43cb49b4f0f5d8d8813484feefc9f785ea2"
+    },
+    {
+      "date": 1686737544340,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-16-success.log",
+      "hash": "e76b44b7e3505ffd789d147c100c7c1630c77a7e2a9b81bbbfb6944477022136"
+    },
+    {
+      "date": 1686740415318,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-17-success.log",
+      "hash": "7c2c4ffea38c720d6b21b6bd0a77a3bffad995c8d401fbae29e90a870735e798"
+    },
+    {
+      "date": 1686744328986,
+      "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\successes\\phu-2023-14-06-18-success.log",
+      "hash": "c38744ac67782b49db8df08925bad93335aea6108ef967149f4745be6b4a859e"
+    }
+  ],
+  "hashType": "sha256"
 }
