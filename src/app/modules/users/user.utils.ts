@@ -1,4 +1,4 @@
-import { IAcademicSamseter } from '../modules/academicSemester/academicSemester.interface'
+import { IAcademicSamseter } from '../academicSemester/academicSemester.interface'
 import { User } from './user.model'
 
 export const findLastStudentId = async (): Promise<string | undefined> => {
@@ -17,7 +17,7 @@ export const findLastStudentId = async (): Promise<string | undefined> => {
 }
 
 export const generateStudentId = async (
-  academicSemester: IAcademicSamseter | null
+  academicSemester: IAcademicSamseter
 ): Promise<string> => {
   const currentId =
     (await findLastStudentId()) || (0).toString().padStart(5, '0') //00000
@@ -46,6 +46,23 @@ export const generateFacultyId = async (): Promise<string> => {
     (await findLastFacultyId()) || (0).toString().padStart(5, '0')
   let incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0')
   incrementedId = `F-${incrementedId}`
+
+  return incrementedId
+}
+export const findLastAdminId = async (): Promise<string | undefined> => {
+  const lastFaculty = await User.findOne({ role: 'admin' }, { id: 1, _id: 0 })
+    .sort({
+      createdAt: -1,
+    })
+    .lean()
+
+  return lastFaculty?.id ? lastFaculty.id.substring(2) : undefined
+}
+
+export const generateAdminId = async (): Promise<string> => {
+  const currentId = (await findLastAdminId()) || (0).toString().padStart(5, '0')
+  let incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0')
+  incrementedId = `A-${incrementedId}`
 
   return incrementedId
 }
