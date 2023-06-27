@@ -1,7 +1,7 @@
 import express from 'express'
-import { StudentValidaion } from './student.validation'
-import validateRequest from '../../Middlewares/vallidateRequest'
+import validateRequest from '../../middlewares/validateRequest'
 import { StudentController } from './student.controller'
+import { StudentValidaion } from './student.validation'
 const router = express.Router()
 
 router.get('/:id', StudentController.getSingleStudent)

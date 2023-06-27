@@ -1,7 +1,8 @@
 import { Model, Types } from 'mongoose'
 import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interfaces'
-import { IAcademicSamseter } from '../academicSemester/academicSemester.interface'
 import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interfaces'
+import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
+
 export type UserName = {
   firstName: string
   lastName: string
@@ -24,6 +25,7 @@ export type LocalGuardian = {
   contactNo: string
   address: string
 }
+
 export type IStudent = {
   id: string
   name: UserName //embedded object
@@ -39,7 +41,7 @@ export type IStudent = {
   localGuardian: LocalGuardian // embedded object
   academicFaculty: Types.ObjectId | IAcademicFaculty // reference _id
   academicDepartment: Types.ObjectId | IAcademicDepartment // // reference _id
-  academicSemester: Types.ObjectId | IAcademicSamseter // reference _id
+  academicSemester: Types.ObjectId | IAcademicSemester // reference _id
   profileImage?: string
 }
 

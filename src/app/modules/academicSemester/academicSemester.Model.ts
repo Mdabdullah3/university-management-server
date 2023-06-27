@@ -1,21 +1,19 @@
-import { Schema, model } from 'mongoose'
-import {
-  AcademicSemesterModel,
-  IAcademicSamseter,
-} from './academicSemester.interface'
-import {
-  AcademicSemesterCode,
-  AcademicSemesterMonth,
-  AcademicSemesterTitle,
-} from './academicSemesterConstant'
-import ApiError from '../../../Errors/ApiError'
 import httpStatus from 'http-status'
-const academicSemesterSchema = new Schema<IAcademicSamseter>(
+import { Schema, model } from 'mongoose'
+import ApiError from '../../../errors/ApiError'
+import {
+  academicSemesterCodes,
+  academicSemesterTitles,
+  acdemicSemesterMonths,
+} from './academicSemester.constant'
+import { IAcademicSemester } from './academicSemester.interface'
+
+const academicSemesterSchema = new Schema<IAcademicSemester>(
   {
     title: {
       type: String,
       required: true,
-      enum: AcademicSemesterTitle,
+      enum: academicSemesterTitles,
     },
     year: {
       type: String,
@@ -24,42 +22,42 @@ const academicSemesterSchema = new Schema<IAcademicSamseter>(
     code: {
       type: String,
       required: true,
-      enum: AcademicSemesterCode,
+      enum: academicSemesterCodes,
     },
     startMonth: {
       type: String,
       required: true,
-      enum: AcademicSemesterMonth,
+      enum: acdemicSemesterMonths,
     },
     endMonth: {
       type: String,
       required: true,
-      enum: AcademicSemesterMonth,
+      enum: acdemicSemesterMonths,
     },
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   }
 )
 
-// Handling Same year and same Samester
-// data -> check -? same yaar && same samester
-
 academicSemesterSchema.pre('save', async function (next) {
-  const isExit = await AcademicSemester.findOne({
+  const isExist = await AcademicSemester.findOne({
     title: this.title,
     year: this.year,
   })
-  if (isExit) {
+  if (isExist) {
     throw new ApiError(
       httpStatus.CONFLICT,
-      'Academic Samester is Already Exit !'
+      'Academic semester is already exist !'
     )
   }
   next()
 })
 
-export const AcademicSemester = model<IAcademicSamseter, AcademicSemesterModel>(
+export const AcademicSemester = model<IAcademicSemester>(
   'AcademicSemester',
   academicSemesterSchema
 )

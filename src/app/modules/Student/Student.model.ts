@@ -1,8 +1,8 @@
 import { Schema, model } from 'mongoose'
-import { IStudent, StudentModel } from './student.interface'
 import { bloodGroup, gender } from './student.constant'
+import { IStudent, StudentModel } from './student.interface'
 
-const StudentSchema = new Schema<IStudent, StudentModel>(
+export const StudentSchema = new Schema<IStudent, StudentModel>(
   {
     id: {
       type: String,
@@ -140,5 +140,9 @@ const StudentSchema = new Schema<IStudent, StudentModel>(
     },
   }
 )
+
+// StudentSchema.index({
+//   bloodGroup: 1,
+// });
 
 export const Student = model<IStudent, StudentModel>('Student', StudentSchema)

@@ -1,13 +1,13 @@
 import { SortOrder } from 'mongoose'
+import { paginationHelpers } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../interfaces/common'
+import { IPaginationOptions } from '../../../interfaces/pagination'
 import { academicFacultySearchableFields } from './academicFaculty.constants'
 import {
   IAcademicFaculty,
   IAcademicFacultyFilters,
 } from './academicFaculty.interfaces'
 import { AcademicFaculty } from './academicFaculty.model'
-import { IPaginnationOptions } from '../../../interfaces/pagination'
-import { paginationHelpers } from '../../../helpers/paginationHelpers'
 
 const createFaculty = async (
   payload: IAcademicFaculty
@@ -18,7 +18,7 @@ const createFaculty = async (
 
 const getAllFaculties = async (
   filters: IAcademicFacultyFilters,
-  paginationOptions: IPaginnationOptions
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicFaculty[]>> => {
   const { searchTerm, ...filtersData } = filters
   const { page, limit, skip, sortBy, sortOrder } =
@@ -58,7 +58,7 @@ const getAllFaculties = async (
     .skip(skip)
     .limit(limit)
 
-  const total = await AcademicFaculty.countDocuments(whereConditions)
+  const total = await AcademicFaculty.countDocuments()
 
   return {
     meta: {

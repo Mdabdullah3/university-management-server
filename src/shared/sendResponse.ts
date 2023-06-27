@@ -5,23 +5,23 @@ type IApiReponse<T> = {
   success: boolean
   message?: string | null
   meta?: {
-    page?: number
+    page: number
     limit: number
     total: number
   }
   data?: T | null
 }
 
-const sendReponse = <T>(res: Response, data: IApiReponse<T>): void => {
+const sendResponse = <T>(res: Response, data: IApiReponse<T>): void => {
   const responseData: IApiReponse<T> = {
     statusCode: data.statusCode,
     success: data.success,
     message: data.message || null,
     meta: data.meta || null || undefined,
-    data: data.data || null,
+    data: data.data || null || undefined,
   }
 
   res.status(data.statusCode).json(responseData)
 }
 
-export default sendReponse
+export default sendResponse

@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\.28e3f610b8f3205c3de9f528995d244fc4b77d68-audit.json",
+    "files": [
+        {
+            "date": 1687517559273,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-23-06-16-error.log",
+            "hash": "8812c957dfca464f9bfd50644683279f06333a24392a24f8fdfd2da551bbf72c"
+        },
+        {
+            "date": 1687518036879,
+            "name": "C:\\Users\\ASUS VIVOBOOK\\OneDrive\\Desktop\\University-management-backend\\logs\\winston\\errors\\phu-2023-23-06-17-error.log",
+            "hash": "7919478eced993d61f0d1ec5caac3360713f028081f1f1a34411f8eadc22e120"
+        }
+    ],
+    "hashType": "sha256"
+}

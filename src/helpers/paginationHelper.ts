@@ -7,14 +7,15 @@ type IOptions = {
   sortOrder?: SortOrder
 }
 
-type IOptionResult = {
+type IOptionsResult = {
   page: number
   limit: number
   skip: number
   sortBy: string
   sortOrder: SortOrder
 }
-const calculatePagination = (options: IOptions): IOptionResult => {
+
+const calculatePagination = (options: IOptions): IOptionsResult => {
   const page = Number(options.page || 1)
   const limit = Number(options.limit || 10)
   const skip = (page - 1) * limit
@@ -31,4 +32,6 @@ const calculatePagination = (options: IOptions): IOptionResult => {
   }
 }
 
-export const paginationHelpers = { calculatePagination }
+export const paginationHelpers = {
+  calculatePagination,
+}

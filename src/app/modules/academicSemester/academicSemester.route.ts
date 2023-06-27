@@ -1,7 +1,9 @@
 import express from 'express'
-import { AcademicSemesterValidation } from './academicSemesterValidation'
-import validateRequest from '../../Middlewares/vallidateRequest'
-import { AcademicSemesterController } from './academicSemesterController'
+import validateRequest from '../../middlewares/validateRequest'
+// import { UserController } from './user.controller';
+
+import { AcademicSemesterController } from './academicSemester.controller'
+import { AcademicSemesterValidation } from './acdemicSemester.validation'
 const router = express.Router()
 
 router.post(
@@ -9,6 +11,7 @@ router.post(
   validateRequest(AcademicSemesterValidation.createAcademicSemesterZodSchema),
   AcademicSemesterController.createSemester
 )
+
 router.get('/:id', AcademicSemesterController.getSingleSemester)
 
 router.patch(
@@ -16,9 +19,9 @@ router.patch(
   validateRequest(AcademicSemesterValidation.updateAcademicSemesterZodSchema),
   AcademicSemesterController.updateSemester
 )
+
 router.delete('/:id', AcademicSemesterController.deleteSemester)
 
-router.get('/', AcademicSemesterController.getAllSemester)
-router.get('/:id', AcademicSemesterController.getAllSemester)
+router.get('/', AcademicSemesterController.getAllSemesters)
 
-export const SemesterRoute = router
+export const AcademicSemesterRoutes = router
