@@ -1,7 +1,7 @@
 import express from 'express'
+import validateRequest from '../../middlewares/validateRequest'
 import { UserController } from './user.controller'
 import { UserValidation } from './user.validation'
-import validateRequest from '../../Middlewares/vallidateRequest'
 const router = express.Router()
 
 router.post(
@@ -22,4 +22,4 @@ router.post(
   UserController.createAdmin
 )
 
-export const UserRoute = router
+export const UserRoutes = router

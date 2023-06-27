@@ -12,11 +12,11 @@ import {
   generateFacultyId,
   generateStudentId,
 } from './user.utils'
-import { IStudent } from '../Student/student.interface'
-import { AcademicSemester } from '../academicSemester/academicSemester.Model'
-import { IAcademicSamseter } from '../academicSemester/academicSemester.interface'
-import { Student } from '../Student/Student.model'
-import ApiError from '../../../Errors/ApiError'
+import { Student } from '../student/student.model'
+import { IStudent } from '../student/student.interface'
+import { AcademicSemester } from '../academicSemester/academicSemester.model'
+import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
+import ApiError from '../../../errors/ApiError'
 
 const createStudent = async (
   student: IStudent,
@@ -39,7 +39,7 @@ const createStudent = async (
   try {
     session.startTransaction()
 
-    const id = await generateStudentId(academicsemester as IAcademicSamseter)
+    const id = await generateStudentId(academicsemester as IAcademicSemester)
 
     user.id = id
     student.id = id

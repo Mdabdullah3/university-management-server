@@ -1,36 +1,35 @@
 import { z } from 'zod'
 import {
-  AcademicSemesterCode,
-  AcademicSemesterMonth,
-  AcademicSemesterTitle,
-} from './academicSemesterConstant'
+  academicSemesterCodes,
+  academicSemesterTitles,
+  acdemicSemesterMonths,
+} from './academicSemester.constant'
 
 const createAcademicSemesterZodSchema = z.object({
   body: z.object({
-    title: z.enum([...AcademicSemesterTitle] as [string, ...string[]], {
-      required_error: 'Title is Required',
+    title: z.enum([...academicSemesterTitles] as [string, ...string[]], {
+      required_error: 'Title is required',
     }),
-    year: z.number({
-      required_error: 'Year is Required',
+    year: z.string({
+      required_error: 'Year is required ',
     }),
-    code: z.enum([...AcademicSemesterCode] as [string, ...string[]], {
-      required_error: 'Code is Required ',
+    code: z.enum([...academicSemesterCodes] as [string, ...string[]]),
+    startMonth: z.enum([...acdemicSemesterMonths] as [string, ...string[]], {
+      required_error: 'Start month is needed',
     }),
-    startMonth: z.enum([...AcademicSemesterMonth] as [string, ...string[]], {
-      required_error: 'Start Month is Required',
-    }),
-    endMonth: z.enum([...AcademicSemesterMonth] as [string, ...string[]], {
-      required_error: 'End Month is Required',
+    endMonth: z.enum([...acdemicSemesterMonths] as [string, ...string[]], {
+      required_error: 'End month is needed',
     }),
   }),
 })
+
 ///  Ensure 1: Route Level : Update -->  Give me title and code both , neither
 
 const updateAcademicSemesterZodSchema = z
   .object({
     body: z.object({
       title: z
-        .enum([...AcademicSemesterTitle] as [string, ...string[]], {
+        .enum([...academicSemesterTitles] as [string, ...string[]], {
           required_error: 'Title is required',
         })
         .optional(),
@@ -40,15 +39,15 @@ const updateAcademicSemesterZodSchema = z
         })
         .optional(),
       code: z
-        .enum([...AcademicSemesterCode] as [string, ...string[]])
+        .enum([...academicSemesterCodes] as [string, ...string[]])
         .optional(),
       startMonth: z
-        .enum([...AcademicSemesterMonth] as [string, ...string[]], {
+        .enum([...acdemicSemesterMonths] as [string, ...string[]], {
           required_error: 'Start month is needed',
         })
         .optional(),
       endMonth: z
-        .enum([...AcademicSemesterMonth] as [string, ...string[]], {
+        .enum([...acdemicSemesterMonths] as [string, ...string[]], {
           required_error: 'End month is needed',
         })
         .optional(),

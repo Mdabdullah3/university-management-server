@@ -1,7 +1,7 @@
 import express from 'express'
+import validateRequest from '../../middlewares/validateRequest'
 import { AcademicDepartmentController } from './academicDepartment.controller'
 import { AcademicDepartmentValidation } from './academicDepartment.validations'
-import validateRequest from '../../Middlewares/vallidateRequest'
 
 const router = express.Router()
 
@@ -27,4 +27,4 @@ router.delete('/:id', AcademicDepartmentController.deleteDepartment)
 
 router.get('/', AcademicDepartmentController.getAllDepartments)
 
-export const academicDepartmentRoutes = router
+export const AcademicDepartmentRoutes = router
